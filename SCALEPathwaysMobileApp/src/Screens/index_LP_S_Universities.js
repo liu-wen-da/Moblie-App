@@ -1,0 +1,1 @@
+export { default } from './index_LP_S_Universities';
