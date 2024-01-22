@@ -1,73 +1,115 @@
-import React, { useState } from "react";
-import { View, Text, StyleSheet, ScrollView, Button, SafeAreaView, StatusBar, FlatList, Pressable} from "react-native";
+import React, { useState, useEffect } from "react";
+import { View, Text, StyleSheet, ScrollView, Button, SafeAreaView, StatusBar, FlatList, Pressable, Alert, ActivityIndicator, RefreshControl} from "react-native";
 import CustomInputs from "../components/CustomeInputs/CustomInputs"; // for the custom inputs 
 import CustomButton from "../components/CustomeButton/CustomButton"; // for the custom button
 import { useNavigation } from '@react-navigation/native'
 import Search_Bar from "../components/Search_Bar/Search_Bar"
-import HamburgerMenu from "../components/HamburgerMenu/HamburgerMenu";
+import CurrentSchedule from "./CurrentSchedule";
+import { func } from "prop-types";
 
 const LP_S_Both = () => {
     
-    const terms_and_classes = [
-        { 
-            term: 'Fall 2023',
-            classes: ['CptS 101', 'CptS 102', 'CptS 103']
-        },
-        {
-            term: 'Spring 2024',
-            classes: ['CptS 104', 'CptS 105', 'CptS 106']
-        },
-        {
-            term: 'Fall 2024',
-            classes: ['CptS 107', 'CptS 108', 'CptS 109']
-        }
-
-    ]
-    
+    const svdSchURL = "http://10.0.2.2:3031/getSavedSchedules"
+    const [isBusy, setBusy] = useState(true)
+    let [isLoading, setIsLoading] = useState(true);
+    let [response, setResponse] = useState([]);
     const navigation = useNavigation();
+    let fetchdata = {};
 
-    const onReturnPressed = () => {
-        console.warn('Return Pressed');
-        navigation.navigate('Profile');
-    };
+    const [refreshing, setRefreshing] = React.useState(false);
 
-    const onButtonPres = () => {
-        Alert.alert('Check on degree details');
-    };
-
-    const oneTerm = ( {item} ) => (
+    const onRefresh = React.useCallback(() => {
+        setRefreshing(true);
+        setTimeout(() => {
+          setRefreshing(false);
+        }, 2000);
+    }, []);
+    
+    const goToSchedule = ( item ) =>
+    {
+        global.selectedSchedule = item
+        navigation.navigate('CurrentSchedule',{ selectedSchedule: item})
+    }
+    
+    const eachButton = ( {item} ) => (
         <View>
-            <Text style={styles.heading}>{item.term}</Text>
-            <Pressable style={styles.class_pressable}>
-                    <Text style={styles.class_text}>{item.classes[0]}</Text>
-            </Pressable>
-            <Pressable style={styles.class_pressable}>
-                    <Text style={styles.class_text}>{item.classes[1]}</Text>
-            </Pressable>
-            <Pressable style={styles.class_pressable}>
-                    <Text style={styles.class_text}>{item.classes[2]}</Text>
-            </Pressable>
+            <Button title={item.name + ""} onPress={() => goToSchedule(item)} style={styles.listButton}></Button>
+            {/* Once we SCALE has the back end to display the name of the schedule we can display the name of the schedule with the id */}
         </View>
     )
 
-    return (
+    async function fetchData2()
+    {
+        const fetchresponse = await fetch(svdSchURL);
+        // global.scheduleList = await fetchresponse.json();
+        setResponse(await fetchresponse.json());
+        // console.error("fetch data: " + JSON.stringify(scheduleList));
+        setIsLoading(false);
+    }
+
+    // const fetchData = () => {
+    //     fetch(svdSchURL)
+    //       .then((response) => response.json())
+    //       .then((json) => setResponse(json.body))
+    //       .catch((error) => console.error(error))
+    //       .finally(() => 
+    //       {
+    //         setIsLoading(false)
+    //         console.error(JSON.stringify(response))
+    //     });
+    // };
+
+    // useEffect(() => {
+    //     setIsLoading(true);
+    //     // fetchData();
+    //     fetchData2();
+    //     console.warn("UNIVERSITIES: " + JSON.stringify(global.scheduleList.body.universities[0].schedules))
+    // }, [scheduleName]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            setIsLoading(true);
+            await fetchData2();
+            //console.warn("UNIVERSITIES: " + JSON.stringify(global.scheduleList.body.universities[0].schedules))
+            setIsLoading(false);
+        }
+        fetchData();
+    }, [scheduleName]);
+
+    const getContent = () => {
+        if (isLoading) {
+            return <ActivityIndicator size="large"/>
+        }
+        else
+        {
+            return (
+                <View style={styles.view_padding}>
+                    <Text style={styles.title}>My Schedules</Text>
+                    <ScrollView
+                    refreshControl={
+                        <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+                    }>
+                        <FlatList style={styles.flat_list}
+                            data={response.body.universities[0].schedules}
+                            renderItem = {eachButton}
+                        />
+                    </ScrollView>
+                </View>
+            )
+        }
+    };
+    
+    return(
         <View style={styles.view_padding}>
-            <Search_Bar></Search_Bar>
-            <Text style={styles.title}>Schedule</Text>
-            <FlatList style={styles.flat_list}
-                data={terms_and_classes}
-                renderItem = {oneTerm}>
-
-            </FlatList>
+            {getContent()}
         </View>
-
     )
 }
 
 const styles = StyleSheet.create({
     view_padding: {
         flex: 1,
-        paddingTop:40
+        paddingTop:10
     },
     root: {
         alignItems: 'center',
@@ -107,6 +149,10 @@ const styles = StyleSheet.create({
     {
         flex: 1,
     },
+    listButton: {
+        marginBottom: 10
+    }
+    
 });
 
 

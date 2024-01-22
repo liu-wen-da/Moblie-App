@@ -1,0 +1,410 @@
+{
+    "status": "ok",
+    "body": {
+        "id": 5,
+        "major_id": 1033,
+        "degree_id": 1,
+        "instruction_terms": [
+            {
+                "id": 1,
+                "name": "Spring 2020",
+                "start_year": 2020,
+                "title": "Spring 2020",
+                "order": 1,
+                "courses": [
+                    {
+                        "id": 5,
+                        "name": "Roots of Contemporary Issues",
+                        "number": 105,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "History",
+                        "prefix": "HISTORY",
+                        "type": "Non-Certification"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Introduction to Formal Logic",
+                        "number": 201,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Philosophy",
+                        "prefix": "PHIL",
+                        "type": "Non-Certification"
+                    },
+                    {
+                        "id": 28,
+                        "name": "Electrical Circuits I",
+                        "number": 261,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Electrical Engineering",
+                        "prefix": "E_E",
+                        "type": "Non-Certification"
+                    },
+                    {
+                        "id": 2,
+                        "name": "College Composition",
+                        "number": 101,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "English",
+                        "prefix": "ENGLISH",
+                        "type": "Non-Certification"
+                    },
+                    {
+                        "id": 1,
+                        "name": "Program Design & Development in C",
+                        "number": 121,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Computer Science",
+                        "prefix": "CPT_S",
+                        "type": "Non-Certification"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Calculus I",
+                        "number": 171,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Mathematics",
+                        "prefix": "MATH",
+                        "type": "Non-Certification"
+                    },
+                    {
+                        "id": 6,
+                        "name": "Biology of Humans",
+                        "number": 101,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Biology",
+                        "prefix": "BIOLOGY",
+                        "type": "Elective"
+                    },
+                    {
+                        "id": 13,
+                        "name": "Drawing",
+                        "number": 110,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Fine Arts",
+                        "prefix": "FINE_ART",
+                        "type": "Elective"
+                    },
+                    {
+                        "id": 9,
+                        "name": "Introduction to the World of Languages",
+                        "number": 101,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Foreign Languages and Cultures",
+                        "prefix": "FOR_LANG",
+                        "type": "Elective"
+                    },
+                    {
+                        "id": 10,
+                        "name": "Media and Society",
+                        "number": 101,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Communication and Society",
+                        "prefix": null,
+                        "type": "Elective"
+                    },
+                    {
+                        "id": 12,
+                        "name": "Introduction to Digital Technology and Culture",
+                        "number": 101,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Digital Technology and Culture",
+                        "prefix": "DTC",
+                        "type": "Elective"
+                    }
+                ],
+                "totalCredits": 35
+            },
+            {
+                "id": 2,
+                "name": "Fall 2020",
+                "start_year": 2020,
+                "title": "Fall 2020",
+                "order": 2,
+                "courses": [
+                    {
+                        "id": 16,
+                        "name": "Calculus II",
+                        "number": 172,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Mathematics",
+                        "prefix": "MATH",
+                        "type": "Non-Certification"
+                    },
+                    {
+                        "id": 32,
+                        "name": "Technical and Professional Writing",
+                        "number": 402,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "English",
+                        "prefix": "ENGLISH",
+                        "type": "Non-Certification"
+                    },
+                    {
+                        "id": 17,
+                        "name": "Discrete Structures",
+                        "number": 216,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Mathematics",
+                        "prefix": "MATH",
+                        "type": "Non-Certification"
+                    },
+                    {
+                        "id": 18,
+                        "name": "Introductory Linear Algebra",
+                        "number": 220,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Mathematics",
+                        "prefix": "MATH",
+                        "type": "Non-Certification"
+                    },
+                    {
+                        "id": 15,
+                        "name": "Data Structures C/C++",
+                        "number": 122,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Computer Science",
+                        "prefix": "CPT_S",
+                        "type": "Non-Certification"
+                    }
+                ],
+                "totalCredits": 17
+            },
+            {
+                "id": 3,
+                "name": "Spring 2021",
+                "start_year": 2021,
+                "title": "Spring 2021",
+                "order": 3,
+                "courses": [
+                    {
+                        "id": 23,
+                        "name": "Physics for Scientists and Engineers I",
+                        "number": 201,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Physics and Astronomy",
+                        "prefix": null,
+                        "type": "Non-Certification"
+                    },
+                    {
+                        "id": 34,
+                        "name": "Probability and Statistics",
+                        "number": 360,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Mathematics",
+                        "prefix": "MATH",
+                        "type": "Non-Certification"
+                    },
+                    {
+                        "id": 19,
+                        "name": "Advanced Data Structures in C/C++",
+                        "number": 223,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Computer Science",
+                        "prefix": "CPT_S",
+                        "type": "Non-Certification"
+                    },
+                    {
+                        "id": 21,
+                        "name": "Introduction to Mathematical Reasoning",
+                        "number": 301,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Mathematics",
+                        "prefix": "MATH",
+                        "type": "Non-Certification"
+                    },
+                    {
+                        "id": 20,
+                        "name": "Calculus III",
+                        "number": 273,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Mathematics",
+                        "prefix": "MATH",
+                        "type": "Non-Certification"
+                    },
+                    {
+                        "id": 24,
+                        "name": "Automata and Formal Languages",
+                        "number": 317,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Computer Science",
+                        "prefix": "CPT_S",
+                        "type": "Certification"
+                    }
+                ],
+                "totalCredits": 18
+            },
+            {
+                "id": 4,
+                "name": "Fall 2021",
+                "start_year": 2021,
+                "title": "Fall 2021",
+                "order": 4,
+                "courses": [
+                    {
+                        "id": 22,
+                        "name": "Introduction to Computer Architecture",
+                        "number": 260,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Computer Science",
+                        "prefix": "CPT_S",
+                        "type": "Non-Certification"
+                    },
+                    {
+                        "id": 27,
+                        "name": "Physics for Scientists and Engineers II",
+                        "number": 202,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Physics and Astronomy",
+                        "prefix": null,
+                        "type": "Non-Certification"
+                    },
+                    {
+                        "id": 26,
+                        "name": "Programming Language Design",
+                        "number": 355,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Computer Science",
+                        "prefix": "CPT_S",
+                        "type": "Certification"
+                    },
+                    {
+                        "id": 29,
+                        "name": "Professional Skills in Computing and Engineering",
+                        "number": 302,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Computer Science",
+                        "prefix": "CPT_S",
+                        "type": "Certification"
+                    },
+                    {
+                        "id": 35,
+                        "name": "Object Oriented Software Principles",
+                        "number": 321,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Computer Science",
+                        "prefix": "CPT_S",
+                        "type": "Certification"
+                    },
+                    {
+                        "id": 30,
+                        "name": "Design and Analysis of Algorithms",
+                        "number": 350,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Computer Science",
+                        "prefix": "CPT_S",
+                        "type": "Certification"
+                    },
+                    {
+                        "id": 25,
+                        "name": "Software Engineering Principles",
+                        "number": 322,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Computer Science",
+                        "prefix": "CPT_S",
+                        "type": "Certification"
+                    }
+                ],
+                "totalCredits": 21
+            },
+            {
+                "id": 5,
+                "name": "Spring 2022",
+                "start_year": 2022,
+                "title": "Spring 2022",
+                "order": 5,
+                "courses": [
+                    {
+                        "id": 36,
+                        "name": "Senior Design Project I",
+                        "number": 421,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Computer Science",
+                        "prefix": "CPT_S",
+                        "type": "Certification"
+                    },
+                    {
+                        "id": 31,
+                        "name": "Systems Programming C/C++",
+                        "number": 360,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Computer Science",
+                        "prefix": "CPT_S",
+                        "type": "Certification"
+                    }
+                ],
+                "totalCredits": 7
+            },
+            {
+                "id": 6,
+                "name": "Fall 2022",
+                "start_year": 2022,
+                "title": "Fall 2022",
+                "order": 6,
+                "courses": [
+                    {
+                        "id": 37,
+                        "name": "Senior Design Project II",
+                        "number": 423,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Computer Science",
+                        "prefix": "CPT_S",
+                        "type": "Certification"
+                    },
+                    {
+                        "id": 33,
+                        "name": "Computer Security",
+                        "number": 427,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Computer Science",
+                        "prefix": "CPT_S",
+                        "type": "Certification"
+                    },
+                    {
+                        "id": 41,
+                        "name": "Operating Systems and Computer Architecture",
+                        "number": 460,
+                        "grade": "-",
+                        "taken": false,
+                        "major": "Computer Science",
+                        "prefix": "CPT_S",
+                        "type": "Elective"
+                    }
+                ],
+                "totalCredits": 9
+            }
+        ]
+    }
+}

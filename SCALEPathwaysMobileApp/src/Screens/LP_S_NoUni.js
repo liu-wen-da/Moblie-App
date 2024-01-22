@@ -6,6 +6,8 @@ import Search_Bar from "../components/Search_Bar/Search_Bar";
 
 const NoUniScreen = () => {
 
+    global.scheduleName = '';
+    
     const navigation = useNavigation();
 
     const onReturnPressed = () => {

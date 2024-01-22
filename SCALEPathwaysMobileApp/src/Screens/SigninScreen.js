@@ -13,12 +13,12 @@ import * as Yup from 'yup';
 
 const SigninScreen = () => {
 
-    const SigninScreenSchema = Yup.object().shape({
-        email: Yup.string().email().required('An email is required'),
-        password: Yup.string()
-            .required()
-            .min(8, 'Password is too short - should be 8 chars minimum.')
-    });
+    // const SigninScreenSchema = Yup.object().shape({
+    //     email: Yup.string().email().required('An email is required'),
+    //     password: Yup.string()
+    //         .required()
+    //         .min(8, 'Password is too short - should be 8 chars minimum.')
+    // });
 
     const onlogin = async ( email, password ) => {
         try {
@@ -29,18 +29,32 @@ const SigninScreen = () => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                email: 'admin@gmail.com',
-                password: 'ikelos437',
+                email: email,
+                password: password,
              })
             })
-            const json = await response.json();
-            console.log('Sign in '+ json);
-            console.log(email, password);
-            console.log('Logged In Successfully');
-            navigation.navigate('Holder');
+            
+            const json = await response.text();
+
+            // check if the user exists by seeing if response is "success"
+            if (json === "success"){
+                console.log('Response is "' + json + '", Logged In Successfully');
+                global.newTime = 0
+                navigation.navigate('Holder');
+            }
+            else
+            {
+                console.log('Response is "' + json + '"", Log In Failed');
+                Alert.alert('Invald Credentials', 'Email or password is incorrect.') // could implement this as text below the field.
+            }
+            // correct credentials: admin@gmail.com ikelos437
         }catch(error) {
-            console.error(error);
-            navigation.navigate('Holder');
+            // We attempted to log-in this way because the response from the POST request for Log-in
+            // is just "success" which is a format error. 
+            // It should be something like {"response":"success"}
+            console.error(error.toString());
+            // reload the page
+
         }
     }
 
@@ -56,7 +70,7 @@ const SigninScreen = () => {
 
     // tells me the sign up button was pressed
     const onSignUpPressed = () => {
-        console.warn('Sign Up');
+        console.warn('Navigating to Sign Up');
         navigation.navigate('Sign up');
     };
 
@@ -67,13 +81,13 @@ const SigninScreen = () => {
             <Formik
                 initialValues={{ email: '', password: '' }}
                 onSubmit={values => onlogin(values.email, values.password)}
-                validationSchema={SigninScreenSchema}
+                // validationSchema={SigninScreenSchema}
                 validateOnMount={true} // this will validate immediately 
                 >
                     {({ handleChange, handleBlur, handleSubmit, values, errors, isValid, touched }) => (
                 <ScrollView showsVerticalScrollIndicator={false}>
                     <Image source={Logo} style={[styles.logo]} />
-                    <View style={styles.warraper}>
+                    <View style={styles.wrapper}>
                    
                         <View style = {styles.wrapper_white}>
                         
@@ -153,7 +167,7 @@ const styles = StyleSheet.create({
         borderRadius : 4,
         dropShadow : 1,
     },
-    warraper: {
+    wrapper: {
        marginTop: 80,
        margin: 20,
     },

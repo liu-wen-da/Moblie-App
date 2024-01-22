@@ -1,22 +1,13 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, useWindowDimensions, ScrollView, Button, TextInput, Pressable} from "react-native";
+import { View, Text, StyleSheet, useWindowDimensions, ScrollView, Button, TextInput, Pressable, Alert} from "react-native";
 import CustomButton_back_signin from "../components/CustomeButton/CustomButton_Back_to_signin";
 import { useNavigation } from '@react-navigation/native';
 import * as Yup from 'yup';
+import { Formik } from 'formik';
+import ReactDOM from "react-dom";
 
 
 const SignupScreen = () => {
-
-    // this helper function is a schema for the form validation
-    const SignupScreenSchema = Yup.object().shape({
-        email: Yup.string().email().required('An email is required'),
-        password: Yup.string()
-            .required()
-            .min(8, 'Password is too short - should be 8 chars minimum.')
-            .matches(/(?=.*[0-9])/, 'Password must contain a number.')
-            .matches(/(?=.*[a-z])/, 'Password must contain a lowercase letter.')
-            .matches(/(?=.*[A-Z])/, 'Password must contain a uppercase letter.')
-    });
 
 
     const navigation = useNavigation();
@@ -28,8 +19,10 @@ const SignupScreen = () => {
     const onPrivacy = () => {
         console.warn('Condition');
     };
-    const onRegisterPressed = async () => {
+    
+    const onRegisterPressed = async ( first_name, last_name, email, password, password2, phoneNumber, dateOfBirth, city, state, highSchool ) => {
         try {
+            console.warn(first_name, last_name, email)
             const response = await fetch("http://10.0.2.2:3031/createAccount/submit", { // 10.0.2.2 is the address used by the android emulator for the localhost.
             method: 'POST',
             headers: {
@@ -37,34 +30,57 @@ const SignupScreen = () => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                name: "jack",
-                email: "test@mail.com",
-                password: "mypassword123",
+                name: first_name,
+                email: email,
+                password: password,
                 type: "student",
-                phoneNumber: "1234567890",
-                dateOfBirth: "03/01/1999",
-                city: "seattle",
-                state: "WA",
-                highSchool: "school"
+                phoneNumber: phoneNumber,
+                dateOfBirth: dateOfBirth,
+                city: city,
+                state: state,
+                highSchool: highSchool,
              })
             })
-            const json = await response.json();
-            console.log('Sign up ' + json);
+            const json = await response.text();
+            console.log(json);
+            // check if the user exists by seeing if response is "success"
+            if(json === "success"){
+                console.log('Response is "' + json + '"", Account Created');
+                navigation.navigate("Sign in");
+            }
+            else
+            {
+                console.log('Response is "' + json + '"", Account Creation Failed');
+                Alert.alert('Email error', 'The email you provided has already been registered or is invalid.') // could implement this as text below the field.
+            }
         }catch(error) {
-            console.error(error);
-        } finally
-        {
-           console.warn('Register Pressed');
+            Alert.alert("Missing Fields","Please fill in all of the fields.");
         }
-        
     };
+
     const onSigninPressed = () => {
         console.warn('Sign in');
         navigation.navigate('Sign in');
     };
     return (
         <View style = {styles.mainbackground}>
-            <View>
+            <View style>
+            <Formik
+                initialValues={{ first_name: '', last_name: '', password: '', password2: '', email: '', phoneNumber: '', dateOfBirth: '', city: '', state: '', highSchool: ''}}
+                onSubmit={values => onRegisterPressed(
+                    values.first_name,
+                    values.last_name,
+                    values.email,
+                    values.password,
+                    values.password2,
+                    values.phoneNumber,
+                    values.dateOfBirth,
+                    values.city,
+                    values.state,
+                    values.highSchool)}
+                validateOnMount={true} // this will validate immediately 
+                >
+                {({ handleChange, handleBlur, handleSubmit, values, errors, isValid, touched }) => (
                 <ScrollView showsVerticalScrollIndicator={false}>
                     <View styles={styles.root}>
                         
@@ -76,12 +92,14 @@ const SignupScreen = () => {
                                 <View style={styles.inputField}>  
                                     
                                     <TextInput
-                                        placeholderTextColor={'#444'}
-                                        placeholder="Enter first name"
-                                        autoCapitalize="none"
-                                        keyboardType="first name"
-                                        textContentType="first name"
-                                        authFocus={true}
+                                    placeholderTextColor={'#444'}
+                                    placeholder="Enter first name"
+                                    autoCapitalize="none"
+                                    textContentType="name"
+                                    authFocus={true}
+                                    onChangeText={handleChange('first_name')}
+                                    onBlur={handleBlur('first_name')}
+                                    value={values.first_name}
                                     />
                                 </View>
                                 <View style={styles.inputField}>  
@@ -90,9 +108,12 @@ const SignupScreen = () => {
                                         placeholderTextColor={'#444'}
                                         placeholder="Enter last name"
                                         autoCapitalize="none"
-                                        keyboardType="last name"
-                                        textContentType="last name"
+                                        keyboardType="name"
+                                        textContentType="name"
                                         authFocus={true}
+                                        onChangeText={handleChange('last_name')}
+                                        onBlur={handleBlur('last_name')}
+                                        value={values.last_name}
                                     />
                                 </View>
                                 <View style={styles.inputField}>  
@@ -101,9 +122,12 @@ const SignupScreen = () => {
                                         placeholderTextColor={'#444'}
                                         placeholder="Enter email"
                                         autoCapitalize="none"
-                                        keyboardType="email-address"
-                                        textContentType="emailAddress"
+                                        keyboardType="name"
+                                        textContentType="name"
                                         authFocus={true}
+                                        onChangeText={handleChange('email')}
+                                        onBlur={handleBlur('email')}
+                                        value={values.email}
                                     />
                                 </View>
                                 <View style={styles.inputField}>  
@@ -113,8 +137,11 @@ const SignupScreen = () => {
                                         placeholder="Enter Password"
                                         autoCapitalize="none"
                                         autoCorrect={false}
-                                        secureTextEntry={true}
+                                        secureTextEntry={false}
                                         textContentType="password"
+                                        onChangeText={handleChange('password')}
+                                        onBlur={handleBlur('password')}
+                                        value={values.password}
                                     />
                                 </View>
                                 <View style={styles.inputField}>  
@@ -124,40 +151,111 @@ const SignupScreen = () => {
                                         placeholder="Confirm Password"
                                         autoCapitalize="none"
                                         autoCorrect={false}
-                                        secureTextEntry={true}
-                                        textContentType="password"
+                                        secureTextEntry={false}
+                                        textContentType="password2"
+                                        onChangeText={handleChange('password2')}
+                                        onBlur={handleBlur('password2')}
+                                        value={values.password2}
+                                        // password confirmation
+                                        // ref={register({
+                                        //     validate: value =>
+                                        //       value === values.password || "The passwords do not match"
+                                        //   })}
+                                    />
+                                </View>
+                                
+
+                                <View style={styles.inputField}>  
+                                    
+                                    <TextInput
+                                        placeholderTextColor={'#444'}
+                                        placeholder="+1 (XXX) XXX-XXXX"
+                                        autoCapitalize="none"
+                                        autoCorrect={false}
+                                        secureTextEntry={false}
+                                        keyboardType="number-pad"
+                                        textContentType="telephoneNumber"
+                                        onChangeText={handleChange('phoneNumber')}
+                                        onBlur={handleBlur('phoneNumber')}
+                                        value={values.phoneNumber}
+                                    />
+                                </View>
+
+                                <View style={styles.inputField}>  
+                                    
+                                    <TextInput
+                                        placeholderTextColor={'#444'}
+                                        placeholder="MM/DD/YEAR"
+                                        autoCapitalize="none"
+                                        autoCorrect={false}
+                                        secureTextEntry={false}
+                                        onChangeText={handleChange('dateOfBirth')}
+                                        onBlur={handleBlur('dateOfBirth')}
+                                        value={values.dateOfBirth}
+                                    />
+                                </View>
+                                  
+                                <View style={styles.inputField}>  
+                                    
+                                    <TextInput
+                                        placeholderTextColor={'#444'}
+                                        placeholder="City"
+                                        autoCapitalize="none"
+                                        autoCorrect={false}
+                                        secureTextEntry={false}
+                                        textContentType="addressCity"
+                                        onChangeText={handleChange('city')}
+                                        onBlur={handleBlur('city')}
+                                        value={values.city}
+                                    />
+                                </View>
+
+                                <View style={styles.inputField}>  
+                                    
+                                    <TextInput
+                                        placeholderTextColor={'#444'}
+                                        placeholder="Highschool"
+                                        autoCapitalize="none"
+                                        autoCorrect={false}
+                                        secureTextEntry={false}
+                                        onChangeText={handleChange('highSchool')}
+                                        onBlur={handleBlur('highSchool')}
+                                        value={values.highSchool}
+                                    />
+                                </View>
+
+                                <View style={styles.inputField}>  
+                                    
+                                    <TextInput
+                                        placeholderTextColor={'#444'}
+                                        placeholder="Enter State ex(AK)"
+                                        autoCapitalize="True"
+                                        keyboardType="name"
+                                        textContentType="name"
+                                        authFocus={true}
+                                        onChangeText={handleChange('state')}
+                                        onBlur={handleBlur('state')}
+                                        value={values.state}
                                     />
                                 </View>
 
                                 <View style ={styles.inputFieldCreateAccount}>
-
-                                    <Button title= "Create Account" onPress={onRegisterPressed} />
-
+                                    <Button title= "Create Account" onPress={handleSubmit} />
                                 </View>
-
-
                             </View>
 
-                            
-                        
-
                         <Text style={styles.text}> By registering you agree to our{' '}<Text style={styles.link} onPress={onTerm}>Terms</Text> and <Text style={styles.link} onPress={onPrivacy}>Condition</Text>
-
-
                         <CustomButton_back_signin text="Back to Sign in" onPress={onSigninPressed} type="TERTIARY" />
-                        
-                     
-    
-                        </Text>
-                        
 
+                        </Text>
                     </View>
                 </ScrollView>
+                )}
+            </Formik>
             </View>
         </View>
     )
 }
-
 
 const styles = StyleSheet.create({
     root: {
@@ -190,16 +288,20 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         dropShadow: 1,
     },
+    wrapper: {
+        marginTop: 80,
+        margin: 20,
+     },
     inputFieldCreateAccount: {
         borderRadius : 5,
         padding : 10,
         dropShadow : 1,
     },
     inputField: {
-        borderRadius : 1,
-        padding : 2.5,
+        borderRadius : 4,
+        padding : 6,
         backgroundColor : '#ffffff',
-        marginBottom : 8,
+        marginBottom : 10,
         borderBottomWidth: 1,
         dropShadow : 1,
     },

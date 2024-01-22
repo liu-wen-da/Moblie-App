@@ -1,0 +1,1055 @@
+{
+    "status": "ok",
+    "body": [
+        {
+            "major": "Accounting",
+            "universityName": "Washington State University",
+            "majorCategory": "Business",
+            "prefix": "ACCTG",
+            "major_id": 1008
+        },
+        {
+            "major": "Agricultural Biotechnology",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": null,
+            "major_id": 1009
+        },
+        {
+            "major": "Agricultural Education",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": "AG_ED",
+            "major_id": 1010
+        },
+        {
+            "major": "Agricultural Technology and Production Management",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": null,
+            "major_id": 1011
+        },
+        {
+            "major": "Agricultural and Food Business Economics",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": null,
+            "major_id": 1012
+        },
+        {
+            "major": "Agricultural and Food Systems",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": "AFS",
+            "major_id": 1013
+        },
+        {
+            "major": "Agriculture and Food Security",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": null,
+            "major_id": 1014
+        },
+        {
+            "major": "Animal Sciences",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": "ANIM_SCI",
+            "major_id": 1015
+        },
+        {
+            "major": "Anthropology",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "ANTH",
+            "major_id": 1016
+        },
+        {
+            "major": "Apparel, Merchandising, Design and Textiles",
+            "universityName": "Washington State University",
+            "majorCategory": "Art",
+            "prefix": "AMDT",
+            "major_id": 1017
+        },
+        {
+            "major": "Architectural Studies",
+            "universityName": "Washington State University",
+            "majorCategory": "Art",
+            "prefix": null,
+            "major_id": 1018
+        },
+        {
+            "major": "Art",
+            "universityName": "Washington State University",
+            "majorCategory": "Art",
+            "prefix": null,
+            "major_id": 1019
+        },
+        {
+            "major": "Asian Studies",
+            "universityName": "Washington State University",
+            "majorCategory": "Language and Literature",
+            "prefix": null,
+            "major_id": 1020
+        },
+        {
+            "major": "Athletic Training",
+            "universityName": "Washington State University",
+            "majorCategory": "Health Sciences",
+            "prefix": null,
+            "major_id": 1021
+        },
+        {
+            "major": "Basic Medical Sciences",
+            "universityName": "Washington State University",
+            "majorCategory": "Health Sciences",
+            "prefix": null,
+            "major_id": 1022
+        },
+        {
+            "major": "Biochemistry",
+            "universityName": "Washington State University",
+            "majorCategory": "Physical Sciences",
+            "prefix": null,
+            "major_id": 1023
+        },
+        {
+            "major": "Bioengineering",
+            "universityName": "Washington State University",
+            "majorCategory": "Engineering and Computer Science",
+            "prefix": "BIO_ENG",
+            "major_id": 1024
+        },
+        {
+            "major": "Biology",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": "BIOLOGY",
+            "major_id": 1025
+        },
+        {
+            "major": "Chemical Engineering",
+            "universityName": "Washington State University",
+            "majorCategory": "Engineering and Computer Science",
+            "prefix": "CHE",
+            "major_id": 1026
+        },
+        {
+            "major": "Chemistry",
+            "universityName": "Washington State University",
+            "majorCategory": "Physical Sciences",
+            "prefix": "CHEM",
+            "major_id": 1027
+        },
+        {
+            "major": "Chinese",
+            "universityName": "Washington State University",
+            "majorCategory": "Language and Literature",
+            "prefix": "CHINESE",
+            "major_id": 1028
+        },
+        {
+            "major": "Civil Engineering",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "CE",
+            "major_id": 1029
+        },
+        {
+            "major": "Communication and Society",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": null,
+            "major_id": 1030
+        },
+        {
+            "major": "Comparative Ethnic Studies",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "CES",
+            "major_id": 1031
+        },
+        {
+            "major": "Computer Engineering",
+            "universityName": "Washington State University",
+            "majorCategory": "Engineering and Computer Science",
+            "prefix": null,
+            "major_id": 1032
+        },
+        {
+            "major": "Computer Science",
+            "universityName": "Washington State University",
+            "majorCategory": "Engineering and Computer Science",
+            "prefix": "CPT_S",
+            "major_id": 1033
+        },
+        {
+            "major": "Construction Engineering",
+            "universityName": "Washington State University",
+            "majorCategory": "Engineering and Computer Science",
+            "prefix": "CON_E",
+            "major_id": 1034
+        },
+        {
+            "major": "Construction Management",
+            "universityName": "Washington State University",
+            "majorCategory": "Business",
+            "prefix": "CST_M",
+            "major_id": 1035
+        },
+        {
+            "major": "Criminal Justice and Criminology",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": null,
+            "major_id": 1036
+        },
+        {
+            "major": "Data Analytics",
+            "universityName": "Washington State University",
+            "majorCategory": "Math",
+            "prefix": "DATA",
+            "major_id": 1037
+        },
+        {
+            "major": "Digital Technology and Culture",
+            "universityName": "Washington State University",
+            "majorCategory": "Engineering and Computer Science",
+            "prefix": "DTC",
+            "major_id": 1038
+        },
+        {
+            "major": "Earth Sciences (Geology)",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": null,
+            "major_id": 1039
+        },
+        {
+            "major": "Economic Sciences",
+            "universityName": "Washington State University",
+            "majorCategory": "Business",
+            "prefix": "ECONS",
+            "major_id": 1040
+        },
+        {
+            "major": "Electrical Engineering",
+            "universityName": "Washington State University",
+            "majorCategory": "Engineering and Computer Science",
+            "prefix": "E_E",
+            "major_id": 1041
+        },
+        {
+            "major": "Elementary Education",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": null,
+            "major_id": 1042
+        },
+        {
+            "major": "English",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "ENGLISH",
+            "major_id": 1043
+        },
+        {
+            "major": "Entrepreneurship",
+            "universityName": "Washington State University",
+            "majorCategory": "Business",
+            "prefix": "ENTRP",
+            "major_id": 1044
+        },
+        {
+            "major": "Environmental and Ecosystem Sciences",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": null,
+            "major_id": 1045
+        },
+        {
+            "major": "Field Crop Management",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": null,
+            "major_id": 1046
+        },
+        {
+            "major": "Finance",
+            "universityName": "Washington State University",
+            "majorCategory": "Business",
+            "prefix": "FIN",
+            "major_id": 1047
+        },
+        {
+            "major": "Fine Arts",
+            "universityName": "Washington State University",
+            "majorCategory": "Art",
+            "prefix": "FINE_ART",
+            "major_id": 1048
+        },
+        {
+            "major": "Food Science",
+            "universityName": "Washington State University",
+            "majorCategory": "Health Sciences",
+            "prefix": "FS",
+            "major_id": 1049
+        },
+        {
+            "major": "Foreign Languages and Cultures",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "FOR_LANG",
+            "major_id": 1050
+        },
+        {
+            "major": "Forestry",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": null,
+            "major_id": 1051
+        },
+        {
+            "major": "French",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "FRENCH",
+            "major_id": 1052
+        },
+        {
+            "major": "Fruit and Vegetable Management",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": null,
+            "major_id": 1053
+        },
+        {
+            "major": "Genetics and Cell Biology",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": null,
+            "major_id": 1054
+        },
+        {
+            "major": "History",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "HISTORY",
+            "major_id": 1055
+        },
+        {
+            "major": "Hospitality Business Management",
+            "universityName": "Washington State University",
+            "majorCategory": "Business",
+            "prefix": "HBM",
+            "major_id": 1056
+        },
+        {
+            "major": "Human Development",
+            "universityName": "Washington State University",
+            "majorCategory": "Health Sciences",
+            "prefix": "H_D",
+            "major_id": 1057
+        },
+        {
+            "major": "Humanities: General Studies",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "HUM",
+            "major_id": 1058
+        },
+        {
+            "major": "Integrated Plant Sciences",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": null,
+            "major_id": 1059
+        },
+        {
+            "major": "Interior Design",
+            "universityName": "Washington State University",
+            "majorCategory": "Art",
+            "prefix": "I_D",
+            "major_id": 1060
+        },
+        {
+            "major": "International Business",
+            "universityName": "Washington State University",
+            "majorCategory": "Business",
+            "prefix": "I_BUS",
+            "major_id": 1061
+        },
+        {
+            "major": "Journalism and Media Production",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "COMJOUR",
+            "major_id": 1062
+        },
+        {
+            "major": "Landscape Architecture",
+            "universityName": "Washington State University",
+            "majorCategory": "Art",
+            "prefix": "LND_ARCH",
+            "major_id": 1063
+        },
+        {
+            "major": "Landscape, Nursery, and Greenhouse Management",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": null,
+            "major_id": 1064
+        },
+        {
+            "major": "Management",
+            "universityName": "Washington State University",
+            "majorCategory": "Business",
+            "prefix": "MGMT",
+            "major_id": 1065
+        },
+        {
+            "major": "Management Information Systems",
+            "universityName": "Washington State University",
+            "majorCategory": "Business",
+            "prefix": "MIS",
+            "major_id": 1066
+        },
+        {
+            "major": "Marketing",
+            "universityName": "Washington State University",
+            "majorCategory": "Business",
+            "prefix": "MKTG",
+            "major_id": 1067
+        },
+        {
+            "major": "Materials Science and Engineering",
+            "universityName": "Washington State University",
+            "majorCategory": "Engineering and Computer Science",
+            "prefix": "MSE",
+            "major_id": 1068
+        },
+        {
+            "major": "Mathematics",
+            "universityName": "Washington State University",
+            "majorCategory": "Math",
+            "prefix": "MATH",
+            "major_id": 1069
+        },
+        {
+            "major": "Mechanical Engineering",
+            "universityName": "Washington State University",
+            "majorCategory": "Engineering and Computer Science",
+            "prefix": "ME",
+            "major_id": 1070
+        },
+        {
+            "major": "Microbiology",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": null,
+            "major_id": 1071
+        },
+        {
+            "major": "Music",
+            "universityName": "Washington State University",
+            "majorCategory": "Art",
+            "prefix": "MUS",
+            "major_id": 1072
+        },
+        {
+            "major": "Music Composition",
+            "universityName": "Washington State University",
+            "majorCategory": "Art",
+            "prefix": null,
+            "major_id": 1073
+        },
+        {
+            "major": "Music Education",
+            "universityName": "Washington State University",
+            "majorCategory": "Art",
+            "prefix": null,
+            "major_id": 1074
+        },
+        {
+            "major": "Music Performance",
+            "universityName": "Washington State University",
+            "majorCategory": "Art",
+            "prefix": null,
+            "major_id": 1075
+        },
+        {
+            "major": "Neuroscience",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": "NEUROSCI",
+            "major_id": 1076
+        },
+        {
+            "major": "Nursing (BSN)",
+            "universityName": "Washington State University",
+            "majorCategory": "Health Sciences",
+            "prefix": null,
+            "major_id": 1077
+        },
+        {
+            "major": "Nursing (RN to BSN)",
+            "universityName": "Washington State University",
+            "majorCategory": "Health Sciences",
+            "prefix": null,
+            "major_id": 1078
+        },
+        {
+            "major": "Nutrition and Exercise Physiology",
+            "universityName": "Washington State University",
+            "majorCategory": "Health Sciences",
+            "prefix": null,
+            "major_id": 1079
+        },
+        {
+            "major": "Organic and Sustainable Agriculture",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": null,
+            "major_id": 1080
+        },
+        {
+            "major": "Philosophy",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "PHIL",
+            "major_id": 1081
+        },
+        {
+            "major": "Physics and Astronomy",
+            "universityName": "Washington State University",
+            "majorCategory": "Engineering and Computer Science",
+            "prefix": null,
+            "major_id": 1082
+        },
+        {
+            "major": "Political Science",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "POL_S",
+            "major_id": 1083
+        },
+        {
+            "major": "Psychology",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "PSYCH",
+            "major_id": 1084
+        },
+        {
+            "major": "Social Sciences: General Studies",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": null,
+            "major_id": 1085
+        },
+        {
+            "major": "Social Studies Teaching",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": null,
+            "major_id": 1086
+        },
+        {
+            "major": "Sociology",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "SOC",
+            "major_id": 1087
+        },
+        {
+            "major": "Software Engineering",
+            "universityName": "Washington State University",
+            "majorCategory": "Engineering and Computer Science",
+            "prefix": null,
+            "major_id": 1088
+        },
+        {
+            "major": "Spanish",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "SPANISH",
+            "major_id": 1089
+        },
+        {
+            "major": "Speech and Hearing Sciences",
+            "universityName": "Washington State University",
+            "majorCategory": "Health Sciences",
+            "prefix": null,
+            "major_id": 1090
+        },
+        {
+            "major": "Sport Management",
+            "universityName": "Washington State University",
+            "majorCategory": "Business",
+            "prefix": "SPMGT",
+            "major_id": 1091
+        },
+        {
+            "major": "Sport Science",
+            "universityName": "Washington State University",
+            "majorCategory": "Health Sciences",
+            "prefix": null,
+            "major_id": 1092
+        },
+        {
+            "major": "Strategic Communication",
+            "universityName": "Washington State University",
+            "majorCategory": "Business",
+            "prefix": "COMSTRAT",
+            "major_id": 1093
+        },
+        {
+            "major": "Turfgrass Management",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": null,
+            "major_id": 1094
+        },
+        {
+            "major": "Wildlife Ecology and Conservation Sciences",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": null,
+            "major_id": 1095
+        },
+        {
+            "major": "Wine and Beverage Business Management",
+            "universityName": "Washington State University",
+            "majorCategory": "Business",
+            "prefix": null,
+            "major_id": 1096
+        },
+        {
+            "major": "Viticulture and Enology",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": "VIT_ENOL",
+            "major_id": 1097
+        },
+        {
+            "major": "Women's, Gender, and Sexuality Studies",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "WGSS",
+            "major_id": 1098
+        },
+        {
+            "major": "Zoology",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": null,
+            "major_id": 1099
+        },
+        {
+            "major": "Economics",
+            "universityName": "Washington State University",
+            "majorCategory": "Business",
+            "prefix": null,
+            "major_id": 1100
+        },
+        {
+            "major": "Business Administration",
+            "universityName": "Washington State University",
+            "majorCategory": "Business",
+            "prefix": "B_A",
+            "major_id": 1216
+        },
+        {
+            "major": "Business Law",
+            "universityName": "Washington State University",
+            "majorCategory": "Business",
+            "prefix": "B_LAW",
+            "major_id": 1217
+        },
+        {
+            "major": "Management and Operations",
+            "universityName": "Washington State University",
+            "majorCategory": "Business",
+            "prefix": "MGTOP",
+            "major_id": 1218
+        },
+        {
+            "major": "Aerospace Studies",
+            "universityName": "Washington State University",
+            "majorCategory": "Business",
+            "prefix": "AERO",
+            "major_id": 1219
+        },
+        {
+            "major": "General Agriculture",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": "AGRI",
+            "major_id": 1220
+        },
+        {
+            "major": "Agricultural Technology and Management",
+            "universityName": "Washington State University",
+            "majorCategory": "Engineering and Computer Science",
+            "prefix": "AGTM",
+            "major_id": 1221
+        },
+        {
+            "major": "American Indian Studies",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "AIS",
+            "major_id": 1222
+        },
+        {
+            "major": "American Studies",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "AMER_ST",
+            "major_id": 1223
+        },
+        {
+            "major": "Architecture",
+            "universityName": "Washington State University",
+            "majorCategory": "Engineering and Computer Science",
+            "prefix": "ARCH",
+            "major_id": 1224
+        },
+        {
+            "major": "Asia",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "ASIA",
+            "major_id": 1225
+        },
+        {
+            "major": "Astronomy",
+            "universityName": "Washington State University",
+            "majorCategory": "Physical Sciences",
+            "prefix": "ASTRONOM",
+            "major_id": 1226
+        },
+        {
+            "major": "Athletic Training",
+            "universityName": "Washington State University",
+            "majorCategory": "Health Sciences",
+            "prefix": "ATH_T",
+            "major_id": 1227
+        },
+        {
+            "major": "Biological Systems Engineering",
+            "universityName": "Washington State University",
+            "majorCategory": "Engineering and Computer Science",
+            "prefix": "BSYSE",
+            "major_id": 1228
+        },
+        {
+            "major": "Cross-Disciplinary Arts And Sciences",
+            "universityName": "Washington State University",
+            "majorCategory": "Art",
+            "prefix": "CAS",
+            "major_id": 1229
+        },
+        {
+            "major": "Communication",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "COM",
+            "major_id": 1230
+        },
+        {
+            "major": "Health Communication and Promotion",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "COMHLTH",
+            "major_id": 1231
+        },
+        {
+            "major": "Counseling Psychology",
+            "universityName": "Washington State University",
+            "majorCategory": "Health Sciences",
+            "prefix": "COUN_PSY",
+            "major_id": 1232
+        },
+        {
+            "major": "Criminal Justice",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "CRM_J",
+            "major_id": 1233
+        },
+        {
+            "major": "Crop Science",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": "CROP_SCI",
+            "major_id": 1234
+        },
+        {
+            "major": "Cultural Studies and Social Thought in Education",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "CSSTE",
+            "major_id": 1235
+        },
+        {
+            "major": "Engineering Management",
+            "universityName": "Washington State University",
+            "majorCategory": "Engineering and Computer Science",
+            "prefix": "E_M",
+            "major_id": 1236
+        },
+        {
+            "major": "Educational Administration and Supervision",
+            "universityName": "Washington State University",
+            "majorCategory": "Business",
+            "prefix": "ED_AD",
+            "major_id": 1237
+        },
+        {
+            "major": "Mathematics / Science Education",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "ED_MTHSC",
+            "major_id": 1238
+        },
+        {
+            "major": "Educational Psychology",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "ED_PSYCH",
+            "major_id": 1239
+        },
+        {
+            "major": "Educational Research",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "ED_RES",
+            "major_id": 1240
+        },
+        {
+            "major": "Engineering",
+            "universityName": "Washington State University",
+            "majorCategory": "Engineering and Computer Science",
+            "prefix": "ENGR",
+            "major_id": 1241
+        },
+        {
+            "major": "Entomology",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": "ENTOM",
+            "major_id": 1242
+        },
+        {
+            "major": "German",
+            "universityName": "Washington State University",
+            "majorCategory": "Language and Literature",
+            "prefix": "GERMAN",
+            "major_id": 1243
+        },
+        {
+            "major": "Global Animal Health",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": "GLANHLTH",
+            "major_id": 1244
+        },
+        {
+            "major": "University Honors",
+            "universityName": "Washington State University",
+            "majorCategory": "Business",
+            "prefix": "HONORS",
+            "major_id": 1245
+        },
+        {
+            "major": "Horticulture",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": "HORT",
+            "major_id": 1246
+        },
+        {
+            "major": "Humanities",
+            "universityName": "Washington State University",
+            "majorCategory": "Language and Literature",
+            "prefix": "HUMANITY",
+            "major_id": 1247
+        },
+        {
+            "major": "Interdisciplinary",
+            "universityName": "Washington State University",
+            "majorCategory": "Business",
+            "prefix": "INTERDIS",
+            "major_id": 1248
+        },
+        {
+            "major": "Japanese",
+            "universityName": "Washington State University",
+            "majorCategory": "Language and Literature",
+            "prefix": "JAPANESE",
+            "major_id": 1249
+        },
+        {
+            "major": "Kinesiology",
+            "universityName": "Washington State University",
+            "majorCategory": "Health Sciences",
+            "prefix": "KINES",
+            "major_id": 1250
+        },
+        {
+            "major": "Language, Literacy, and Technology",
+            "universityName": "Washington State University",
+            "majorCategory": "Language and Literature",
+            "prefix": "LLT",
+            "major_id": 1251
+        },
+        {
+            "major": "Materials Science",
+            "universityName": "Washington State University",
+            "majorCategory": "Physical Sciences",
+            "prefix": "MATSE",
+            "major_id": 1252
+        },
+        {
+            "major": "Molecular Biosciences",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": "MBIOS",
+            "major_id": 1253
+        },
+        {
+            "major": "Military Science",
+            "universityName": "Washington State University",
+            "majorCategory": "Business",
+            "prefix": "MIL_SCI",
+            "major_id": 1254
+        },
+        {
+            "major": "Master in Teaching",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "MIT",
+            "major_id": 1255
+        },
+        {
+            "major": "Molecular Plant Sciences",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": "MPS",
+            "major_id": 1256
+        },
+        {
+            "major": "Physics",
+            "universityName": "Washington State University",
+            "majorCategory": "Physical Sciences",
+            "prefix": "PHYSICS",
+            "major_id": 1257
+        },
+        {
+            "major": "Plant Pathology",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": "PL_P",
+            "major_id": 1258
+        },
+        {
+            "major": "Prevention Science",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "PREV_SCI",
+            "major_id": 1259
+        },
+        {
+            "major": "School of Design and Construction",
+            "universityName": "Washington State University",
+            "majorCategory": "Art",
+            "prefix": "SDC",
+            "major_id": 1260
+        },
+        {
+            "major": "School of The Environment",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": "SOE",
+            "major_id": 1261
+        },
+        {
+            "major": "Soil Science",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": "SOIL_SCI",
+            "major_id": 1262
+        },
+        {
+            "major": "Special Education",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "SPEC_ED",
+            "major_id": 1263
+        },
+        {
+            "major": "Statistics",
+            "universityName": "Washington State University",
+            "majorCategory": "Math",
+            "prefix": "STAT",
+            "major_id": 1264
+        },
+        {
+            "major": "Teaching and Learning",
+            "universityName": "Washington State University",
+            "majorCategory": "Social Sciences",
+            "prefix": "TCH_LRN",
+            "major_id": 1265
+        },
+        {
+            "major": "University-Wide",
+            "universityName": "Washington State University",
+            "majorCategory": "Business",
+            "prefix": "UNIV",
+            "major_id": 1266
+        },
+        {
+            "major": "Veterinary Clinical Medicine And Surgery",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": "VET_CLIN",
+            "major_id": 1267
+        },
+        {
+            "major": "Veterinary Medicine",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": "VET_MED",
+            "major_id": 1268
+        },
+        {
+            "major": "Veterinary Microbiology",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": "VET_MICR",
+            "major_id": 1269
+        },
+        {
+            "major": "Veterinary Pathology",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": "VET_PATH",
+            "major_id": 1270
+        },
+        {
+            "major": "Veterinary Physiology And Pharmacology",
+            "universityName": "Washington State University",
+            "majorCategory": "Biological and Environmental Sciences",
+            "prefix": "VET_PH",
+            "major_id": 1271
+        },
+        {
+            "major": "University Writing",
+            "universityName": "Washington State University",
+            "majorCategory": "Language and Literature",
+            "prefix": "WRIT",
+            "major_id": 1272
+        }
+    ]
+}

@@ -1,76 +1,92 @@
-import React, { useState } from "react";
-import { View, Text, StyleSheet, useWindowDimensions, ScrollView, FlatList, Pressable} from "react-native";
+import React, { useState, useEffect} from "react";
+import { View, Text, StyleSheet, useWindowDimensions, ScrollView, FlatList, Pressable, ActivityIndicator, Image} from "react-native";
 import CustomInputs from "../components/CustomeInputs/CustomInputs"; // for the custom inputs 
 import CustomButton from "../components/CustomeButton/CustomButton"; // for the custom button
 import { useNavigation } from '@react-navigation/native';
 import  HamburgerMenu from "../components/HamburgerMenu/HamburgerMenu";
 import Search_Bar from "../components/Search_Bar/Search_Bar"
-import Tabs from "../components/Navbar-React/Tabs"
+import GestureFlipView from 'react-native-gesture-flip-card';
+import WSU_Image from "../../assets/images/loading.jpg"
+
+
+
+const uniURL = "http://10.0.2.2:3031/universities"
 
 const LandingPage_S_Universities = () => {
 
+    global.scheduleName = '';
+    
+    const [isLoading, setLoading] = useState(true);
+    const [data, setData] = useState([]);
+
     const navigation = useNavigation();
+    //const universityJSON = GETUniversites();
 
-    const universities = [
-        { 
-            class: 'Washington State University',
-        },
-        {
-            class: 'University of Washington',
-        },
-        {
-            class: 'Central Washington University',
-        }
-    ]
+    // let state = {
+    //     universityName: 'BAD'
+    // }
 
-    const GETUniversites = async () => {
-        {
-            try {
-                const response = await fetch("http://10.0.2.2:3031/universities", { // 10.0.2.2 is the address used by the android emulator for the localhost.
-                method: 'GET',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json',
-                },
-                })
-                const json = await response.json();
-                console.log(json);
-            }catch(error) {
-                console.error(error);
-            } finally
-            {
-            console.warn('Logout Pressed');
-            navigation.navigate("Sign in");
-            }
-        };
-    }
+    useEffect(() => {
+        fetch(uniURL)
+          .then((response) => response.json())
+          .then((json) => setData(json.body))
+          .catch((error) => console.error(error))
+          .finally(() => setLoading(false));
+      }, []);
 
-    const eachUniversity = ( {item} ) => (
-        <View>
-            <Pressable style={styles.university_pressable}>
-                    <Text style={styles.class_text}>{item.class}</Text>
-            </Pressable>
-        </View>
-    )
+    const renderFront = () => {
+        return (
+            <View style = {styles.frontStyle}>
+                {isLoading ? <ActivityIndicator/> : (
+                    <FlatList
+                    data={data}
+                    renderItem={({ item }) => (
+                        <Text style = {styles.frontStyle}>
+                            {item.universityName} </Text>
+                    )}
+                    />
+                    
+                )}
+                {/* <Text style = {{color: "black", fontSize: 20}}>Front</Text>  */}
+            </View>
+        );
+      };
+      
+      const renderBack = () => {
+        return (
+            <View style = {styles.backStyle}>
+                {isLoading ? <ActivityIndicator/> : (
+                    <FlatList
+                    data={data}
+                    renderItem={({ item }) => (
+                        <Text style = {styles.backStyle}>
+                            {item.universityDescription} </Text>
+                        
+                    )}
+                    />
+                )}
+                {/* <Text style = {{color: "black", fontSize: 20}}>Back</Text> */}
+            </View>
+        );
+      };
 
     return (
-        <View style={styles.view_padding}>
-            <Search_Bar></Search_Bar>
-            <Text style={styles.title}>Universities</Text>
-
-            <FlatList style={styles.flat_list} 
-                data={universities} renderItem={eachUniversity}>
-            </FlatList>
-        </View>
+        <>
+            <View style={styles.view_padding}>
+                <Search_Bar></Search_Bar>
+                <Text style={styles.title}>Universities</Text>
+            </View>
+            <View style={styles.container}>
+                <GestureFlipView width={500} height={300}>
+                    {renderFront()}
+                    {renderBack()}
+                </GestureFlipView>
+            </View>
+        </>
     )
 }
 
 const styles = StyleSheet.create({
-    root: {
-        alignItems: 'center',
-        padding: 30,
-        
-    },
     title: {
         fontSize: 24,
         fontWeight: 'bold',
@@ -86,7 +102,6 @@ const styles = StyleSheet.create({
         color: '#FDB075',
     },
     view_padding: {
-        flex: 1,
         paddingTop:40
     },
     university_pressable: {
@@ -103,6 +118,34 @@ const styles = StyleSheet.create({
     flat_list: 
     {
         flex: 1,
+    }, 
+    container: {
+        marginTop:1,
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
+    frontStyle: {
+        flex: 1,
+        width: 300,
+        height: 200,
+        backgroundColor: '#D9D9D9',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+        borderRadius: 20,
+        marginTop: 20,
+        
+    },
+    backStyle: {
+        flex: 1,
+        width: 300,
+        height: 200,
+        backgroundColor: '#D9D9D9',
+        justifyContent: 'center',
+        textAlign: 'center',
+        alignItems: 'center',
+        borderRadius: 20,
+        marginTop: 20,
     },
 });
 
